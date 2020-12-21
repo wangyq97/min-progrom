@@ -1,7 +1,6 @@
 
 <view class="cates" >
     <searchInput/>
-     
     <!-- 内容 -->
     <view class="cate_content">
         <scroll-view 
