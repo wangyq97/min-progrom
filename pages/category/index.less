@@ -1,0 +1,51 @@
+/* pages/category/index.wxss */
+
+.cates {
+    .cate_content {
+        display: flex;
+        height: calc(100vh - 90rpx);
+        .cate_left {
+            flex: 2;
+            .cate_left_item {
+                height: 80rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-style: 30rpx;
+            }
+            .active {
+                color: var(--themeColor);
+                border-left: 5rpx solid currentColor;
+            }
+        }
+        .cate_right {
+            flex: 5;
+            .cate_title {
+                height: 80rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .delimiter {
+                    color: #ccc;
+                    padding: 0 10rpx;
+                }
+                .title {
+
+                }
+            }
+            .cate_list {
+                display: flex;
+                flex-wrap: wrap;
+                navigator {
+                    width:33.33%;
+                    padding: 10rpx;
+                    text-align: center;
+                    image {
+                        width:50%
+                    }
+                    .cate_goodname {}
+                }
+            }
+        }
+    }
+}
