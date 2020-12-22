@@ -1,2 +1,34 @@
 <!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<view class="contain">
+    <searchInput></searchInput>
+    <Tabs tabs="{{tabs}}"  bindtabsItemChange = "handTabsItemChange">
+        <block wx:if="{{tabs[0].isActive}}">
+            <view class="first_tab">
+                <navigator
+                 wx:for="{{goodsList}}"
+                 wx:for-item="item"
+                 wx:for-index="idnex"
+                 wx:key="goods_id"
+                 class="goods_item">
+                    <view class="goods_img">
+                        <image mode="widthFix" src="{{item.goods_small_logo || defaultUrl}}" />
+                    </view>                    
+                    <view class="goods_info">
+                        <view class="goods_name">
+                            {{item.goods_name}}
+                        </view>
+                        <view class="goods_price">
+                            ￥{{item.goods_price}}
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+        <block wx:elif="{{tabs[1].isActive}}">
+            1
+        </block>
+        <block wx:elif="{{tabs[2].isActive}}">
+            2
+        </block>
+    </Tabs>
+</view>

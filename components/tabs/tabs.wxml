@@ -1,0 +1,19 @@
+<!--components/tabs/tabs.wxml-->
+<view class="tabs">
+    <view class="tabs_title">
+        <view 
+            class="tabs_item {{item.isActive?'active':''}}"
+            wx:for="{{tabs}}"
+            wx:for-index="index"
+            wx:for-item="item"
+            wx:key="id"
+            bindtap = "handItemTap"
+            data-index = "{{index}}"
+        >
+        {{item.value}}
+        </view>
+    </view>
+    <view class="content">
+        <slot></slot>
+    </view>
+</view>
